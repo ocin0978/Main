@@ -39,6 +39,15 @@ local Window = Rayfield:CreateWindow({
 
 local Tab = Window:CreateTab("Script Hub", "file-code-2")
 
+local Section = Tab:CreateSection("Useful")
+
+local Button = Tab:CreateButton({
+   Name = "Keyboard",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
+   end,
+})
+
 local Section = Tab:CreateSection("Admin Scripts")
 
 local Button = Tab:CreateButton({
@@ -60,12 +69,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/h9NvY2PD"))()
 local Button = Tab:CreateButton({
    Name = "Grab Knife V4 (R6 NEEDED)",
    Callback = function()
-   task.spawn(function()
-   task.wait(0.5)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
-       end)
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/Grab%20V4.txt"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/Grab%20V4.txt"))()
    end,
 })
 
@@ -73,19 +77,9 @@ local Tab = Window:CreateTab("Games", "gamepad-2")
 
 local Section = Tab:CreateSection("Just A Baseplate")
 
-local deltaLoaded = false
-
 local Button = Tab:CreateButton({
    Name = "Krystal Dance (R6 NEEDED)",
    Callback = function()
-   if not deltaLoaded then
-   deltaLoaded = true
-   task.spawn(function()
-   task.wait(0.5)
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
-      end)
-   end
-
    loadstring(game:HttpGet("https://raw.githubusercontent.com/sparezirt/Script/refs/heads/main/.github/workflows/JustABaseplate.txt"))()
    end,
 })
