@@ -61,7 +61,7 @@ local Button = Tab:CreateButton({
    Name = "Grab Knife V4 (R6 NEEDED)",
    Callback = function()
    task.spawn(function()
-   task.wait(4.5)
+   task.wait(0.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
        end)
 
@@ -77,7 +77,7 @@ local Button = Tab:CreateButton({
    Name = "Krystal Dance (R6 NEEDED)",
    Callback = function()
    task.spawn(function()
-   task.wait(4.5)
+   task.wait(0.5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
        end)
 
