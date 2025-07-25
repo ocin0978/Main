@@ -70,3 +70,17 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/h
 })
 
 local Tab = Window:CreateTab("Games", "gamepad-2")
+
+local Section = Tab:CreateSection("Just A Baseplate")
+
+local Button = Tab:CreateButton({
+   Name = "Krystal Dance (R6 NEEDED)",
+   Callback = function()
+   task.spawn(function()
+   task.wait(4.5)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
+       end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sparezirt/Script/refs/heads/main/.github/workflows/JustABaseplate.txt"))()
+   end,
+})
