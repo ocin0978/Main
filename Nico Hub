@@ -1,0 +1,96 @@
+local Players = game:GetService("Players")
+
+local LocalPlayer = Players.LocalPlayer
+
+local playerName = LocalPlayer.Name
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/alfhans988/Ul-library/refs/heads/main/Kavo%20(4)"))()
+
+local Window = Library.CreateLib(" Welcome To Nico Hub " .. playerName .."!", "Ocean")
+
+local Tab = Window:NewTab("Script")
+
+local Section = Tab:NewSection("Scripts")
+
+Section:NewButton("Keyboard", "Keyboard Info", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
+
+Section:NewButton("Ban Hammer (R6 NEEDED)", "Ban Hammer (R6 NEEDED) Info", function()loadstring(game:HttpGet("https://pastebin.com/raw/h9NvY2PD"))()
+end)
+
+Section:NewButton("Vereus", "Vereus Info", function()loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Roblox-VEREUS-monster-script-3746"))()
+end)
+
+local Section = Tab:NewSection("Tools")
+
+Section:NewButton("Telekinesis", "Telekinesis Info", function()loadstring(game:HttpGet(("https://raw.githubusercontent.com/SAZXHUB/Control-update/main/README.md"),true))()
+end)
+
+Section:NewButton("Dance (R6 NEEDED)", "Dance (R6 NEEDED) Info", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Scripts/refs/heads/main/Epik%20R6%20Dancezz"))()
+end)
+
+local Tab = Window:NewTab("Script Hub")
+
+local Section = Tab:NewSection("Script Hub")
+
+Section:NewButton("Rochips Panel", "Rochips Panel Info", function()if "you wanna use rochips universal" then
+	local z_x,z_z="gzrux646yj/raw/main.ts","https://glot.io/snippets/"
+	local im,lonely,z_c=task.wait,game,loadstring
+	z_c(lonely:HttpGet(z_z..""..z_x))()
+	return ("This will load in about 2 - 30 seconds" or "according to your device and executor")
+end
+end)
+
+Section:NewButton("GHUB V15", "GHUB V15 Info", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/gclich/GHUBV15_X_ZENXOS-MAINLOADER/refs/heads/main/GHUB-X-ZENXOS-V15.txt"))()
+end)
+
+local Tab = Window:NewTab("Games")
+
+local Section = Tab:NewSection("Grow A Garden")
+
+Section:NewButton("No Lag Hub", "No Lag Hub Info", function()repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+local scripts = {
+    [126884695634066] = "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/Garden/Garden-V1.lua",
+    [81440632616906] = "https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/DigEarth/V1.lua",
+}
+
+local url = scripts[game.PlaceId]
+if url then
+    loadstring(game:HttpGetAsync(url))()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/NoLag-id/No-Lag-HUB/refs/heads/main/untitled.lua"))()
+end
+end)
+
+local Section = Tab:NewSection("99 Nights In Forest")
+
+Section:NewButton("XVC Hub", "XVC Hub Info", function()game:GetService("CoreGui").RobloxGui["CoreScripts/NetworkPause"]:Destroy()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XVCHub/Games/main/99NightsintheForest"))()
+end)
+
+local Section = Tab:NewSection("Just A Baseplate")
+
+Section:NewButton("Become Huge/Giant Man (R6 NEEDED)", "Become Huge/Giant Man (R6 NEEDED) Info", function()loadstring(game:HttpGet("https://rawscripts.net/raw/Just-a-baseplate.-Just-A-Baseplate-Huge-Giant-39127"))()
+end)
+
+Section:NewButton("Krystal Dance (R6 NEEDED)", "Krystal Dance (R6 NEEDED)  Info", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/sparezirt/Script/refs/heads/main/.github/workflows/JustABaseplate.txt"))()
+end)
+
+local Section = Tab:NewSection("Ink Game")
+
+Section:NewButton("Ringta", "Ringta Info", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/wefwef127382/inkgames.github.io/refs/heads/main/ringta.lua"))()
+end)
+
+local Tab = Window:NewTab("Admin")
+
+local Section = Tab:NewSection("Admin Script")
+
+Section:NewButton("Infinite Yield", "Infinite Yield Info", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+Section:NewButton("Nameless Admin", "Nameless Admin Info", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+end)
+
+local Tab = Window:NewTab("Info")
+
+local Section = Tab:NewSection("Created By : ocin0978")
