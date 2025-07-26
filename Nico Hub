@@ -83,3 +83,12 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/sparezirt/Script/refs/heads/main/.github/workflows/JustABaseplate.txt"))()
    end,
 })
+
+local Section = Tab:CreateSection("Dead Rails")
+
+local Button = Tab:CreateButton({
+   Name = "Ringta",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/fjruie/realtraformation.github.io/refs/heads/main/deadrailsringta.lua"))()
+   end,
+})
