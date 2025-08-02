@@ -75,15 +75,6 @@ local Button = Tab:CreateButton({
 
 local Tab = Window:CreateTab("Games", "gamepad-2")
 
-local Section = Tab:CreateSection("Just A Baseplate")
-
-local Button = Tab:CreateButton({
-   Name = "Krystal Dance (R6 NEEDED)",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/sparezirt/Script/refs/heads/main/.github/workflows/JustABaseplate.txt"))()
-   end,
-})
-
 local Section = Tab:CreateSection("Dead Rails")
 
 local Button = Tab:CreateButton({
