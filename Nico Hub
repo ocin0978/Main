@@ -83,3 +83,12 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/wefwef127382/DEADRAILS.github.io/refs/heads/main/mainringta.lua"))()
    end,
 })
+
+local Section = Tab:CreateSection("99 Nights In Forest")
+
+local Button = Tab:CreateButton({
+   Name = "Voidware",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWExtra/main/NightsInTheForest.lua", true))()
+   end,
+})
