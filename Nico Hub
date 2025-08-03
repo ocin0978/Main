@@ -44,11 +44,47 @@ local Section = Tab:CreateSection("Admin Scripts")
 local Button = Tab:CreateButton({
    Name = "Infinite Yield",
    Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
    end,
 })
 
 local Section = Tab:CreateSection("Scripts")
+
+local Button = Tab:CreateButton({
+   Name = "Anti Kick/Anti Ban",
+   Callback = function()
+   local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local LocalPlayer = Players.LocalPlayer
+
+hookfunction(LocalPlayer.Kick, function(...)
+    return nil
+end)
+
+local mt = getrawmetatable(game)
+setreadonly(mt, false)
+local old = mt.__namecall
+
+mt.__namecall = newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    if method == "Kick" and self == LocalPlayer then
+        return nil
+    end
+    if tostring(self):lower():find("ban") then
+        return nil
+    end
+    return old(self, ...)
+end)
+
+for _, v in pairs(ReplicatedStorage:GetDescendants()) do
+    if v:IsA("RemoteEvent") or v:IsA("RemoteFunction") then
+        if v.Name:lower():find("ban") then
+            v:Destroy()
+        end
+    end
+end
+   end,
+})
 
 local Tab = Window:CreateTab("Games", "gamepad-2")
 
