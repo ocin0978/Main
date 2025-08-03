@@ -39,15 +39,6 @@ local Window = Rayfield:CreateWindow({
 
 local Tab = Window:CreateTab("Script Hub", "file-code-2")
 
-local Section = Tab:CreateSection("Useful")
-
-local Button = Tab:CreateButton({
-   Name = "Keyboard",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt"))()
-   end,
-})
-
 local Section = Tab:CreateSection("Admin Scripts")
 
 local Button = Tab:CreateButton({
@@ -58,20 +49,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 })
 
 local Section = Tab:CreateSection("Scripts")
-
-local Button = Tab:CreateButton({
-   Name = "Ban Hammer (R6 NEEDED)",
-   Callback = function()
-loadstring(game:HttpGet("https://pastebin.com/raw/h9NvY2PD"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Grab Knife V4 (R6 NEEDED)",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/Grab%20V4.txt"))()
-   end,
-})
 
 local Tab = Window:CreateTab("Games", "gamepad-2")
 
