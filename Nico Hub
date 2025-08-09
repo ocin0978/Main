@@ -37,6 +37,26 @@ local Code = Tab:Code({
 })
 
 local Tab = Window:Tab({
+    Title = "Script Hub",
+    Icon = "file-code-2",
+    Locked = false,
+})
+
+local Button = Tab:Button({
+    Title = "Tiger X V4",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/BalintTheDevXBack/Universal/refs/heads/main/TigerXHubV4"))()
+    end
+})
+
+local Code = Tab:Code({
+    Title = "Tiger X V4 Code",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/BalintTheDevXBack/Universal/refs/heads/main/TigerXHubV4"))()]]
+})
+
+local Tab = Window:Tab({
     Title = "Games",
     Icon = "gamepad-2",
     Locked = false,
