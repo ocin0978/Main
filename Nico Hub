@@ -1,107 +1,43 @@
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 
-local Window = Rayfield:CreateWindow({
-   Name = "Nico Hub",
-   Icon = 0,
-   LoadingTitle = "Nico Hub",
-   LoadingSubtitle = "by ocin0978",
-   ShowText = "Rayfield",
-   Theme = "Midnight",
-
-   ToggleUIKeybind = "K",
-
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false,
-
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil,
-      FileName = "Nico Hub"
-   },
-
-   Discord = {
-      Enabled = false,
-      Invite = "link",
-      RememberJoins = true
-   },
-
-   KeySystem = false,
-   KeySettings = {
-      Title = "Nico Hub",
-      Subtitle = "Nico Hub Key System",
-      Note = "",
-      FileName = "Key",
-      SaveKey = true,
-      GrabKeyFromSite = false,
-      Key = {"Hello"},
-   }
+local Window = WindUI:CreateWindow({
+    Title = "Nico Hub",
+    Icon = "monitor",
+    Author = "",
+    Folder = "Nico Hub",
+    Size = UDim2.fromOffset(400, 300),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true,
+    SideBarWidth = 200,
+    Background = "",
+    BackgroundImageTransparency = 0.42,
+    HideSearchBar = true,
+    ScrollBarEnabled = true,
 })
 
-local Tab = Window:CreateTab("Script Hub", "file-code-2")
-
-local Section = Tab:CreateSection("Admin Scripts")
-
-local Button = Tab:CreateButton({
-   Name = "Infinite Yield",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-   end,
+local Tab = Window:Tab({
+    Title = "Admin Scripts",
+    Icon = "shield",
+    Locked = false,
 })
 
-local Section = Tab:CreateSection("Scripts")
-
-local Button = Tab:CreateButton({
-   Name = "Anti Kick/Anti Ban",
-   Callback = function()
-   local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local LocalPlayer = Players.LocalPlayer
-
-hookfunction(LocalPlayer.Kick, function(...)
-    return nil
-end)
-
-local mt = getrawmetatable(game)
-setreadonly(mt, false)
-local old = mt.__namecall
-
-mt.__namecall = newcclosure(function(self, ...)
-    local method = getnamecallmethod()
-    if method == "Kick" and self == LocalPlayer then
-        return nil
+local Button = Tab:Button({
+    Title = "Infinite Yield",
+    Desc = "",
+    Locked = false,
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
     end
-    if tostring(self):lower():find("ban") then
-        return nil
-    end
-    return old(self, ...)
-end)
-
-for _, v in pairs(ReplicatedStorage:GetDescendants()) do
-    if v:IsA("RemoteEvent") or v:IsA("RemoteFunction") then
-        if v.Name:lower():find("ban") then
-            v:Destroy()
-        end
-    end
-end
-   end,
 })
 
-local Tab = Window:CreateTab("Games", "gamepad-2")
-
-local Section = Tab:CreateSection("Dead Rails")
-
-local Button = Tab:CreateButton({
-   Name = "Ringta",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/wefwef127382/DEADRAILS.github.io/refs/heads/main/mainringta.lua"))()
-   end,
+local Code = Tab:Code({
+    Title = "Infinite Yield Code",
+    Code = [[loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()]]
 })
 
-local Section = Tab:CreateSection("99 Nights In Forest")
-
-local Button = Tab:CreateButton({
-   Name = "Voidware",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VWExtra/main/NightsInTheForest.lua", true))()
-   end,
+local Tab = Window:Tab({
+    Title = "Games",
+    Icon = "gamepad-2",
+    Locked = false,
 })
